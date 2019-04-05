@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	version="3.0" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+
+	<display-name>RaBo Server - GUI</display-name>
+
+
+	<session-config>
+		<session-timeout>15</session-timeout>
+		<tracking-mode>COOKIE</tracking-mode>
+	</session-config>
+
+
+	<description>
+		De login-config is generiek.
+	</description>
+	<login-config>
+        <auth-method>BASIC</auth-method>
+        <realm-name>SMF Systeemcomplex</realm-name>
+	</login-config>
+
+	<security-role>
+		<role-name>ROLE_CONFIGURATION_CLASSIFICATIONS_CHANGE</role-name>
+	</security-role>
+	<security-role>
+		<role-name>ROLE_CONFIGURATION_CLASSIFICATIONS_VIEW</role-name>
+	</security-role>
+	<security-role>
+		<role-name>ROLE_CONFIGURATION_DEPARTMENTS_CHANGE</role-name>
+	</security-role>
+	<security-role>
+		<role-name>ROLE_CONFIGURATION_DEPARTMENTS_VIEW</role-name>
+	</security-role>
+	<security-role>
+		<role-name>ROLE_CONFIGURATION_OFFICES_CHANGE</role-name>
+	</security-role>
+	<security-role>
+		<role-name>ROLE_CONFIGURATION_OFFICES_VIEW</role-name>
+	</security-role>
+	<security-role>
+		<role-name>ROLE_CONFIGURATION_SYSTEM_SETTINGS</role-name>
+	</security-role>
+	<security-role>
+		<role-name>ROLE_CONFIGURATION_VALIDITY_PERIODS_CHANGE</role-name>
+	</security-role>
+	<security-role>
+		<role-name>ROLE_CONFIGURATION_VALIDITY_PERIODS_VIEW</role-name>
+	</security-role>
+	<security-role>
+		<role-name>ROLE_LOOKUP_AUTHORISATIONS</role-name>
+	</security-role>
+	<security-role>
+		<role-name>ROLE_LOOKUP_EAED</role-name>
+	</security-role>
+	<security-role>
+		<role-name>ROLE_MANAGEMENT_DASHBOARD_CHANGE</role-name>
+	</security-role>
+	<security-role>
+		<role-name>ROLE_MANAGEMENT_DASHBOARD_VIEW</role-name>
+	</security-role>
+	<security-role>
+		<role-name>ROLE_MANAGEMENT_EAED_SENDING_CHANGE</role-name>
+	</security-role>
+	<security-role>
+		<role-name>ROLE_MANAGEMENT_EAED_SENDING_VIEW</role-name>
+	</security-role>
+	<security-role>
+		<role-name>ROLE_MANAGEMENT_LOG_LIST</role-name>
+	</security-role>
+	<security-role>
+		<role-name>ROLE_MANAGEMENT_PASSWORDS</role-name>
+	</security-role>
+	<security-role>
+		<role-name>ROLE_MANUAL_AUTHORISATION_GRANT_ALL</role-name>
+	</security-role>
+	<security-role>
+		<role-name>ROLE_MANUAL_AUTHORISATION_GRANT_SELF</role-name>
+	</security-role>
+	<security-role>
+		<role-name>ROLE_REPORTING_VIEW</role-name>
+	</security-role>
+	<security-role>
+		<role-name>ROLE_WEB_SERVICE_AUTHORISATION</role-name>
+	</security-role>
+
+
+
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>RaBo Server</web-resource-name>
+			<url-pattern>/*</url-pattern>
+			<!--<http-method>GET</http-method>-->
+			<!--<http-method>POST</http-method>-->
+		</web-resource-collection>
+		<auth-constraint>
+			<role-name>ROLE_CONFIGURATION_CLASSIFICATIONS_CHANGE</role-name>
+			<role-name>ROLE_CONFIGURATION_CLASSIFICATIONS_VIEW</role-name>
+			<role-name>ROLE_CONFIGURATION_DEPARTMENTS_CHANGE</role-name>
+			<role-name>ROLE_CONFIGURATION_DEPARTMENTS_VIEW</role-name>
+			<role-name>ROLE_CONFIGURATION_OFFICES_CHANGE</role-name>
+			<role-name>ROLE_CONFIGURATION_OFFICES_VIEW</role-name>
+			<role-name>ROLE_CONFIGURATION_SYSTEM_SETTINGS</role-name>
+			<role-name>ROLE_CONFIGURATION_VALIDITY_PERIODS_CHANGE</role-name>
+			<role-name>ROLE_CONFIGURATION_VALIDITY_PERIODS_VIEW</role-name>
+			<role-name>ROLE_LOOKUP_AUTHORISATIONS</role-name>
+			<role-name>ROLE_LOOKUP_EAED</role-name>
+			<role-name>ROLE_MANAGEMENT_DASHBOARD_CHANGE</role-name>
+			<role-name>ROLE_MANAGEMENT_DASHBOARD_VIEW</role-name>
+			<role-name>ROLE_MANAGEMENT_EAED_SENDING_CHANGE</role-name>
+			<role-name>ROLE_MANAGEMENT_EAED_SENDING_VIEW</role-name>
+			<role-name>ROLE_MANAGEMENT_LOG_LIST</role-name>
+			<role-name>ROLE_MANAGEMENT_PASSWORDS</role-name>
+			<role-name>ROLE_MANUAL_AUTHORISATION_GRANT_ALL</role-name>
+			<role-name>ROLE_MANUAL_AUTHORISATION_GRANT_SELF</role-name>
+			<role-name>ROLE_REPORTING_VIEW</role-name>
+			<role-name>ROLE_WEB_SERVICE_AUTHORISATION</role-name>
+		</auth-constraint>
+	</security-constraint>
+
+
+
+</web-app>
