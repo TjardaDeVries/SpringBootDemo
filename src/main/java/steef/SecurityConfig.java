@@ -9,14 +9,14 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
-  public static final String REALM_NAME = "steef";
-  @Override
-  protected void configure(HttpSecurity http) throws Exception {
-    http
-            .jee()
-            .mappableAuthorities("USER")
-            .and()
-            .csrf().disable();
-  }
+    @Override
+    protected void configure(HttpSecurity http) throws Exception {
+        http
+                .jee().mappableRoles("USER", "ADMIN")
+                .and()
+                .csrf().disable();
+    }
+
+
 
 }
